@@ -1,13 +1,13 @@
 ### Set working directory:
-install.packages("viridis")
-install.packages("ggrepel")
+setwd("Encyclopedia/Europe")
+getwd()
 
 ### Install relevant packages
 library(ggplot2) # For graphs
 library(ggrepel) # For labels
 
 ### Download csv. data file
-data <-read.csv("Encycle_2020.csv", check.names=FALSE)
+data <-read.csv("EUData_2015.csv", check.names=FALSE)
 data
 
 ### Use ggplot to create plot
