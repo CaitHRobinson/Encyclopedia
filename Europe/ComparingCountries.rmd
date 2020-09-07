@@ -13,7 +13,7 @@ data
 ### Use ggplot to create plot
 plot1 <- ggplot(data, aes(x=KEEPWARM, y=ARREARS, fill=REGION))+
   geom_point(alpha = 0.7, size=2) +
-  geom_label_repel(label = data$COUNTRY, size=4, # Add labels to graph
+  geom_label_repel(label = data$COUNTRY, size=4, ## Add labels to graph
                    fontface = 'bold', color = 'white',
                    box.padding = unit(0.1, "lines"),
                    point.padding = unit(0.1, "lines"),
