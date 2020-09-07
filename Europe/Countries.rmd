@@ -1,0 +1,33 @@
+### Set working directory:
+install.packages("viridis")
+install.packages("ggrepel")
+
+### Install relevant packages
+library(ggplot2) # For graphs
+library(ggrepel) # For labels
+
+### Download csv. data file
+data <-read.csv("Encycle_2020.csv", check.names=FALSE)
+data
+
+### Use ggplot to create plot
+plot1 <- ggplot(data, aes(x=KEEPWARM, y=ARREARS, fill=REGION))+
+  geom_point(alpha = 0.7, size=2) +
+  geom_label_repel(label = data$COUNTRY, size=4,
+                   fontface = 'bold', color = 'white',
+                   box.padding = unit(0.1, "lines"),
+                   point.padding = unit(0.1, "lines"),
+                   segment.color = 'grey50')+
+  labs(fill = 'Region')+
+  ylab("Inability to keep home adequately warm (%)") +
+  xlab("Arrears on utility bills (%)")+
+  theme_minimal()+
+  theme(legend.title=element_blank(), legend.text = element_text(size=12), legend.position="right",
+        axis.title.x=element_text(face="bold", size=15), axis.text.x=element_text(size=14),
+        axis.title.y=element_text(face="bold", size=15), axis.text.y=element_text(size=14))
+plot1
+
+### Export as high resolution tiff.
+tiff("Graph_ArrearsWarmth_Large.tiff", width = 3500, height = 3000, res=300)
+plot(plot1)
+dev.off()
