@@ -5,4 +5,5 @@
 Download the [dataset](https://github.com/CaitHRobinson/Encyclopedia/blob/master/Europe/EUData_2015.csv) and [code](https://github.com/CaitHRobinson/Encyclopedia/blob/master/Europe/ComparingCountries.rmd
 ) used to create this graph comparing the two indicators across countries and regions in Europe. The data is based on the EPOV indicators for the year 2015.
 
-![Graph_ArrearsWarmth_Large](https://user-images.githubusercontent.com/57355504/92398113-dd760180-f11f-11ea-80e7-0ec00814aabe.jpg)
+![Graph_Arrears4](https://user-images.githubusercontent.com/57355504/92469479-c6d9b400-f1cc-11ea-93cc-e3ae4b843678.jpg)
+
