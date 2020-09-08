@@ -1,10 +1,14 @@
 ### Set working directory:
-setwd("Encyclopedia/Europe")
+setwd("Encyclopedia/Europe/ComparingCountries.rmd")
 getwd()
 
 ### Install relevant packages
+install.packages("ggplot")
+install.packages("viridis")
+install.packages("ggrepel")
 library(ggplot2) # For graphs
 library(ggrepel) # For labels
+library(viridis) # For colour palettes
 
 ### Download csv. data file
 data <-read.csv("EUData_2015.csv", check.names=FALSE)
@@ -12,13 +16,15 @@ data
 
 ### Use ggplot to create plot
 plot1 <- ggplot(data, aes(x=KEEPWARM, y=ARREARS, fill=REGION))+
-  geom_point(alpha = 0.7, size=2) +
-  geom_label_repel(label = data$COUNTRY, size=4, ## Add labels to graph
+  geom_point(aes(colour=REGION),alpha = 0.7, size=2)+ # Colour points according to region
+  scale_colour_viridis_d()+ 
+  geom_label_repel(label = data$COUNTRY, size=4, # Add country labels
                    fontface = 'bold', color = 'white',
                    box.padding = unit(0.1, "lines"),
                    point.padding = unit(0.1, "lines"),
                    segment.color = 'grey50')+
-  labs(fill = 'Region')+
+  scale_fill_viridis_d()+ # Colour labels according to region
+  labs(fill = 'Region')+ 
   ylab("Inability to keep home adequately warm (%)") +
   xlab("Arrears on utility bills (%)")+
   theme_minimal()+
@@ -28,6 +34,6 @@ plot1 <- ggplot(data, aes(x=KEEPWARM, y=ARREARS, fill=REGION))+
 plot1
 
 ### Export as high resolution tiff.
-tiff("Graph_ArrearsWarmth.tiff", width = 3500, height = 3000, res=300)
+tiff("Graph.tiff", width = 2900, height = 2400, res=300)
 plot(plot1)
 dev.off()
