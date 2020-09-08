@@ -1,4 +1,4 @@
-### Change over time in Regions in England
+## Change over time in Regions in England
 The figure below shows how the percentage of energy poor households across nine administrative regions changed from 2011 to 2018. Whilst over time, energy poverty has declined, it has risen in selected regions (London and the North West). 
 
 Access the [regional data](https://github.com/CaitHRobinson/Encyclopedia/blob/master/England/Regions/Regions_EP.csv) and [code](https://github.com/CaitHRobinson/Encyclopedia/blob/master/England/Regions/RegionsChangeOverTime.rmd) to reproduce the figure.
