@@ -1,4 +1,4 @@
-## Mapping fuel poverty indicators for small areas
+## Mapping fuel poverty indicators for LSOA
 
 **Lower Super Ouput Area boundaries:** The highest resolution at which data are available is Lower Super Output Area (LSOA) representing approximately 1,500 persons (ONS, 2011). A shapefile to map this data can be downloaded from the [UK Data Service](https://borders.ukdataservice.ac.uk/easy_download.html).
 
