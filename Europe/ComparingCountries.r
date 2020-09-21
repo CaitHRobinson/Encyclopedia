@@ -25,8 +25,8 @@ plot1 <- ggplot(data, aes(x=KEEPWARM, y=ARREARS, fill=REGION))+
                    segment.color = 'grey50')+
   scale_fill_viridis_d()+ # Colour labels according to region
   labs(fill = 'Region')+ 
-  ylab("Inability to keep home adequately warm (%)") +
-  xlab("Arrears on utility bills (%)")+
+  ylab("Arrears on utility bills (%)") +
+  xlab("Inability to keep home adequately warm (%)")+
   theme_minimal()+
   theme(legend.title=element_blank(), legend.text = element_text(size=12), legend.position="right",
         axis.title.x=element_text(face="bold", size=15), axis.text.x=element_text(size=14),
